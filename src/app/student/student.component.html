@@ -1,0 +1,32 @@
+<menu></menu>
+<table>
+    <caption>Students</caption>
+    <thead>
+      <tr>
+        <th scope="col">Roll No</th>
+        <th scope="col">First Name</th>
+        <th scope="col">Last Name</th>
+        <th scope="col">D.O.B.</th>
+        <th scope="col">Parent Name</th>
+        <th scope="col">Parent Phone</th>
+        <th scope="col">Address</th>
+        <th scope="col">Delete Student</th>
+        <th scope="col">Edit Student</th>
+
+      </tr>
+    </thead>
+    <tbody *ngFor="let s of students">
+      <tr>
+        <td>{{s.rn}}</td>
+        <td>{{s.firstName}}</td>
+        <td>{{s.lastName}}</td>
+        <td>{{s.birthDate}}</td>
+        <td>{{s.parentName}}</td>
+        <td>{{s.parentPhone}}</td>
+        <td>{{s.address}}</td>
+        <td><button (click)=deleteStudent(s.rn)>Delete</button></td>
+        <td><button (click)=editStudent(s.rn)>Edit</button></td>
+      </tr>
+    </tbody>
+</table>
+

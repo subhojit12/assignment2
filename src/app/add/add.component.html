@@ -1,0 +1,44 @@
+<menu></menu>
+<div>
+  <label class="desc" id="title1">Roll Number</label>
+  <div>
+    <input id="Field1" type="text" [(ngModel)]="student.rn" class="field text fn">
+  </div>
+</div><br>
+<div>
+  <label class="desc" id="title1">First Name</label>
+  <div>
+    <input id="Field1" type="text" [(ngModel)]="student.firstName" class="field text fn">
+  </div>
+</div><br>
+<div>
+  <label class="desc" id="title1">Last Name</label>
+  <div>
+    <input id="Field1" type="text" [(ngModel)]="student.lastName" class="field text fn">
+  </div>
+</div><br>
+<div>
+  <label class="desc" id="title1">D.O.B.</label>
+  <div>
+    <input id="Field1" type="text" [(ngModel)]="student.birthDate" class="field text fn">
+  </div>
+</div><br>
+<div>
+  <label class="desc" id="title1">Parent Name</label>
+  <div>
+    <input id="Field1" type="text" [(ngModel)]="student.parentName" class="field text fn">
+  </div>
+</div><br>
+<div>
+  <label class="desc" id="title1">Parent Phone</label>
+  <div>
+    <input id="Field1" type="text" [(ngModel)]="student.parentPhone" class="field text fn">
+  </div>
+</div><br>
+<div>
+  <label class="desc" id="title1">Address</label>
+  <div>
+    <input id="Field1" type="text" [(ngModel)]="student.address" class="field text fn">
+  </div>
+</div><br>
+<button (click)="addStudent(student)">Add Student</button>
