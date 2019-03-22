@@ -28,8 +28,12 @@ export class StudentsService {
     }
   ]
   getStudents(){
-    
-    return this.students;
+    if(localStorage.getItem('students')!=null){
+      this.students=JSON.parse(localStorage.getItem('students'))
+      return  this.students
+    }else{
+      return this.students;
+    }
   }
   addStudent(student){
     this.students.push(student);
@@ -40,14 +44,16 @@ export class StudentsService {
     for(var i=0;i<this.students.length;i++){
       if(rn == this.students[i].rn){
         this.students.splice(i,1);
+        localStorage.setItem('students',JSON.stringify(this.students));
         break;
       }
     }
   }
   editStudent(student){
+  
     for(var i=0;i<this.students.length;i++){
       if(student.rn==this.students[i].rn){
-        this.students=student;
+        this.students[i]=student;
         localStorage.setItem('students',JSON.stringify(this.students));
         break;
       }

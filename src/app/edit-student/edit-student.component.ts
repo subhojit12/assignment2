@@ -18,7 +18,6 @@ export class EditStudentComponent implements OnInit {
   ngOnInit() {
     this.sub=this.route.params.subscribe(params =>{
       this.rn = +params['rn'];
-      console.log('');
       this.student = this.studentService.getStudentByRn(this.rn)
     })
   }
